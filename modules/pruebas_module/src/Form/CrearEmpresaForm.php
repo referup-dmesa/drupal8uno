@@ -87,9 +87,6 @@ $user->setUsername('user_name');
 // Optional.
 $user->set('init', 'email');
 $user->set('langcode', $language);
-$user->set('preferred_langcode', $language);
-$user->set('preferred_admin_langcode', $language);
-$user->set('setting_name', 'setting_value');
 $user->addRole('rid');
 $user->activate();
 
