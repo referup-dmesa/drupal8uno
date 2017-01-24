@@ -1,0 +1,17 @@
+<?php
+/**
+ * Theme hook
+ */
+function pruebas_module_theme($existing, $type, $theme, $path) {
+     
+    return array(
+        'crear_empresa' => array(
+                                'variables' => array(
+                                    'titulo' => 'Título por defecto', 
+                                    'descripcion' => 'descripción por defecto',
+                                    'formulario'   => NULL
+                                    ),
+                                'template' => 'crear_empresa'
+                            )
+    );
+}

@@ -1,0 +1,23 @@
+mi_modulo.pagina_1:
+ path: '/pagina-1'
+ defaults:
+  _controller: '\Drupal\mi_modulo\Controller\MiModuloController::pagina_1'
+  _title: 'Pságina 1'
+ requirements:
+  _permission: 'access content'
+  
+mi_modulo.pagina_2:
+ path: '/pagina-2'
+ defaults:
+  _controller: '\Drupal\mi_modulo\Controller\MiModuloController::pagina_2'
+  _title: 'Página 2'
+ requirements:
+  _permission: 'access content'
+  
+mi_modulo.insertarGastoForm:
+  path: '/mi_modulo/insertar-gasto'
+  defaults:
+    _form: '\Drupal\mi_modulo\Form\InsertarGastoForm'
+    _title: 'Insertar gasto'
+  requirements:
+    _permission: 'access content'

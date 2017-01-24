@@ -1,0 +1,42 @@
+{# mi_modulo/templates/pagina-1.html.twig #}
+<p>olaaaa</p>
+{% if gastos %}
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Gastos en este mes</div>
+            <div class="panel-body">
+                <p>Esta tabla muestra los gastos de este mes agrupados por tipos de gastos</p>
+            </div>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th class="text-right">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% set total = 0 %}
+                    {% for gasto in gastos %}
+                        {% set total = total + gasto.get('field_cantidad').value %}
+                        {% if loop.last %}
+                            <tr>
+                                <td>{{ gasto.get('field_tipo').value }}</td>   
+                                <td class="text-right">{{ gasto.get('field_cantidad').value }} €</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"><strong>Total</strong></td>   
+                                <td class="text-right"><strong>{{ total }} €</strong></td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td>{{ gasto.get('field_tipo').value }}</td>   
+                                <td class="text-right">{{ gasto.get('field_cantidad').value }} €</td>
+                            </tr>
+                        {% endif%}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endif %}

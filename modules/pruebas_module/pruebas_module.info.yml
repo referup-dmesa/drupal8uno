@@ -1,0 +1,6 @@
+name: Puebas module
+description: Módulo para practicas
+package: Daniel
+ 
+type: module
+core: 8.x

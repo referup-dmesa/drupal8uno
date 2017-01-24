@@ -1,0 +1,7 @@
+example.form:
+    path: '/example-form'
+    defaults:
+        _title: 'que pasa señor'
+        _form: '\Drupal\example\ExampleForm'
+    requirements:
+        _permission: 'acces content'

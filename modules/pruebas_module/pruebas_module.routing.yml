@@ -1,0 +1,15 @@
+pruebas_module.content:
+    path: '/admin/config/modulo-de-pruebas'
+    defaults:
+        _controller: '\Drupal\pruebas_module\Controller\PruebasController::content'
+        _title: 'Modulo de pruebas'
+    requirements:
+        _permission: 'access content'
+         
+pruebas_module.crear_empresa:
+    path: '/admin/config/crear-empresa'
+    defaults:
+        _controller: '\Drupal\pruebas_module\Controller\PruebasController::crearEmpresa'
+        _title: 'Mi primer formulsddsdsdsdario chorra en Drupal 8, a tope !'
+    requirements:
+        _permission: 'access content'
